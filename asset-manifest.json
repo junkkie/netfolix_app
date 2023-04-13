@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/netfolix_app/static/css/main.ffb6015a.css",
+    "main.js": "/netfolix_app/static/js/main.07512df7.js",
+    "index.html": "/netfolix_app/index.html",
+    "main.ffb6015a.css.map": "/netfolix_app/static/css/main.ffb6015a.css.map",
+    "main.07512df7.js.map": "/netfolix_app/static/js/main.07512df7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ffb6015a.css",
+    "static/js/main.07512df7.js"
+  ]
+}
