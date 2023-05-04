@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import 'styles/nav.css'
+import logo from 'img/logo.png'
 
-function Nav() {
+function Nav({userObj}) {
   const [show, setShow] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
@@ -27,14 +28,15 @@ function Nav() {
 
   return (
     <nav className={`nav ${show && 'nav_black'}`}> {/* show가 true이면 className을 추가한다 */}
-      <img className='nav_logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/170px-Netflix_2015_logo.svg.png'
-        alt='' onClick={()=>{window.location.href = "/netfolix_app/"}} /> {/* 로고 클릭할 때마다 새로고침되도록 */}
+      <img className='nav_logo' src={logo}
+        alt='NETFOLIX_logo' onClick={()=>{window.location.href = "/netfolix_app/"}} /> {/* 로고 클릭할 때마다 새로고침되도록 */}
 
       <input className='nav_input' type='search' placeholder='영화를 검색해 보세요'
         onChange={onChange} value={searchValue} />
 
-      <img className='nav_avatar' src='https://occ-0-4796-988.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABbme8JMz4rEKFJhtzpOKWFJ_6qX-0y5wwWyYvBhWS0VKFLa289dZ5zvRBggmFVWVPL2AAYE8xevD4jjLZjWumNo.png?r=a41'
-        alt='' />
+      <Link to='/profile'>
+      <img className='nav_avatar' src={userObj.photoURL} alt='' />
+      </Link> 
     </nav>
   )
 }

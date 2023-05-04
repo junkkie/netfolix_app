@@ -8,14 +8,14 @@
   align-items: center;
   transition: all .5s ease-in;
 }
-.nav_black{background-color: #111;}
+.nav_black{background-color: #0a062d;}
 .nav_logo{
   position: fixed; left: 40px;
-  width: 80px;
+  width: 190px;
   object-fit: contain;
 }
 .nav_avatar{
-  position: fixed; right: 40px;
+  position: fixed; right: 40px; top: 20px;
   width: 30px;
   object-fit: contain;
 }

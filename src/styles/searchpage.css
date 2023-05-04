@@ -1,4 +1,4 @@
-.search-container{width: 100%; text-align: center; padding: 5rem 0; background-color: #000;}
+.search-container{width: 100%; text-align: center; padding: 5rem 0; background: linear-gradient(45deg, #130039 10%, #361a92 20%, #19053a 30%, #19053a 70%, #361a92 80%, #130039 100%); height: 100%;;}
 .movie{display: inline-block; padding-right: 0.5rem; padding-bottom: 7rem;}
 .movie_column-poster{cursor: pointer; transition: transform .3s ease;}
 .movie_column-poster:hover{transform: scale(1.25);}

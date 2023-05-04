@@ -2,6 +2,7 @@
   color: #fff;
   height: 448px;
   object-fit: contain;
+  margin-bottom: 50px;
 }
 .banner_contents{
   margin-left: 40px;
@@ -35,14 +36,16 @@
   color: black;
 }
 .play:hover{
-  background-color: rgba(170,170,170,0.9);
+  background-color: #361a92;
+  color: #fff;
 }
 .info{
-  background-color: rgba(109,109,109,0.7);
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
 }
 .info:hover{
-  background-color: rgb(74,74,74);
+  background-color: #0a062d;
+  color: #fff;
 }
 .banner_description{
   width: 45rem; max-width: 400px; height: 80px;

@@ -1,2 +1,2 @@
 *{margin: 0;}
-.app{background-color: #111; height: 100%;}
+.app{background: linear-gradient(45deg, #130039 10%, #361a92 20%, #19053a 30%, #19053a 70%, #361a92 80%, #130039 100%); height: 100%;}
