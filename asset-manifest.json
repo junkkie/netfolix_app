@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/netfolix_app/static/css/main.ffb6015a.css",
-    "main.js": "/netfolix_app/static/js/main.07512df7.js",
+    "main.css": "/netfolix_app/static/css/main.f764525d.css",
+    "main.js": "/netfolix_app/static/js/main.5a9fa2bd.js",
+    "static/media/logo.png": "/netfolix_app/static/media/logo.185c8617f5e34c41defb.png",
     "index.html": "/netfolix_app/index.html",
-    "main.ffb6015a.css.map": "/netfolix_app/static/css/main.ffb6015a.css.map",
-    "main.07512df7.js.map": "/netfolix_app/static/js/main.07512df7.js.map"
+    "main.f764525d.css.map": "/netfolix_app/static/css/main.f764525d.css.map",
+    "main.5a9fa2bd.js.map": "/netfolix_app/static/js/main.5a9fa2bd.js.map"
   },
   "entrypoints": [
-    "static/css/main.ffb6015a.css",
-    "static/js/main.07512df7.js"
+    "static/css/main.f764525d.css",
+    "static/js/main.5a9fa2bd.js"
   ]
 }
