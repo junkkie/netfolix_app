@@ -14,10 +14,15 @@
   width: 190px;
   object-fit: contain;
 }
+.basic_avatar{
+  position: fixed; right: 40px; top: 20px;
+  width: 30px; height: 30px;
+  object-fit: cover;
+}
 .nav_avatar{
   position: fixed; right: 40px; top: 20px;
   width: 30px;
-  object-fit: contain;
+  object-fit: cover;
 }
 .nav_input{
   position: fixed; left: 50%;

@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth } from 'fbase';
+import '../styles/auth.css'
+import { FaGoogle, FaGithub } from 'react-icons/fa';
 
 const Auth = () => {
   const [newAccount, setNewAccount] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
 
   const onChange = (e) =>{ // input
     console.log(e.target.name);
@@ -54,20 +57,32 @@ const Auth = () => {
 
   const toggleAccount = () => setNewAccount(prev => !prev)
 
+  useEffect(() => {
+    const authForm = document.querySelector(".authForm")
+    if (authForm) {
+      authForm.classList.add("on");
+    }
+  },[])
+
   return (
     <div className='bg'>
-      <div className='logo'></div>
-      <form onSubmit={onSubmit}>
-        <input type='email' name='email' placeholder='이메일' value={email} required onChange={onChange} />
-        <input type='password' name='password' placeholder='비밀번호' value={password} onChange={onChange} />
-        <input type='submit' value={newAccount ? "새로운 계정 만들기" : "로그인"} />
-      </form>
-      <span className='toggleAccount' onClick={toggleAccount}>
-        {newAccount ? "로그인" : "회원가입"}
-      </span>
-      <div className='social'>
-        <button name='google' onClick={onSocialClick}><FontAwesomeIcon icon="fa-brands fa-google" />구글로 로그인</button>
-        <button name='github' onClick={onSocialClick}><FontAwesomeIcon icon="fa-brands fa-github" />깃허브로 로그인</button>
+    <div id='fly-in'>
+      <div><span>OTT 서비스 앱</span>NETFOLIX</div>
+    </div>
+      <div className='authForm' >
+        <div className='logo'></div>
+        <form onSubmit={onSubmit}>
+          <input type='email' name='email' placeholder='이메일' value={email} required onChange={onChange} />
+          <input type='password' name='password' placeholder='비밀번호' value={password} onChange={onChange} />
+          <input type='submit' value={newAccount ? "새로운 계정 만들기" : "로그인"} />
+        </form>
+        <span className='toggleAccount' onClick={toggleAccount}>
+          {newAccount ? "로그인" : "회원가입"}
+        </span>
+        <div className='social'>
+          <button name='google' onClick={onSocialClick}><FontAwesomeIcon icon="fa-brands fa-google" /><FaGoogle /></button>
+          <button name='github' onClick={onSocialClick}><FontAwesomeIcon icon="fa-brands fa-github" /><FaGithub /></button>
+        </div>
       </div>
     </div>
   )

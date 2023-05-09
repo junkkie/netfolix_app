@@ -27,7 +27,6 @@ const FooterContainer = styled.div`
   align-items: center;
   padding: 40px 0;
   box-sizing: border-box;
-  border-top: 1px solid rgb(25,25,25);
   width: 100%;
   position: relative;
   z-index: 100;

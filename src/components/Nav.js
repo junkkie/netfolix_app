@@ -6,6 +6,7 @@ import logo from 'img/logo.png'
 function Nav({userObj}) {
   const [show, setShow] = useState(false);
   const [searchValue, setSearchValue] = useState("");
+  const [newProfile, setNewProfile] = useState("")
   const navigate = useNavigate();
 
   useEffect (() =>{
@@ -35,7 +36,8 @@ function Nav({userObj}) {
         onChange={onChange} value={searchValue} />
 
       <Link to='/profile'>
-      <img className='nav_avatar' src={userObj.photoURL} alt='' />
+        <img className='basic_avatar' src='img/basic.png' alt='기본 이미지' />
+      <img className='nav_avatar' src={userObj.photoURL ? userObj.photoURL : newProfile} alt='' />
       </Link> 
     </nav>
   )

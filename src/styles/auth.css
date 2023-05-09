@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+
+/* 배경 애니메이션 */
+.bg{
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  width: 100vw; height: 100vh;
+  font-weight: 700;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#fly-in {
+  font-size: 4em;
+  margin: 40vh auto;
+  height: 20vh; 
+  text-transform: uppercase;
+}
+
+#fly-in span {
+  display: block;
+  font-size: .4em;
+  opacity: .8;
+}
+
+#fly-in div {
+ position: fixed;
+  margin: 2vh 0;
+  opacity: 0;
+  left: 10vw;
+  width: 80vw;
+  animation: switch 32s linear infinite;
+}
+
+@keyframes switch {
+    0% { opacity: 0;filter: blur(20px); transform:scale(12)}
+    3% { opacity: 1;filter: blur(0); transform:scale(1)}
+    10% { opacity: 1;filter: blur(0); transform:scale(.9)}
+    13% { opacity: 0;filter: blur(10px); transform:scale(.1)}
+    80% { opacity: 0}
+    100% { opacity: 0}
+}
+
+/* 회원가입 폼 */
+.authForm{
+  position: absolute; top: 50%; left: 50%;
+  transform: translateX(-50%);
+  width: 200px; height: 200px;
+  opacity: 0;
+  transition: opacity .5s ease-in 5s;
+}
+.authForm.on{
+  opacity: 1;
+}
+.logo{
+  position: absolute; left: -190px; top: -150px;
+  width: 600px; height: 90px;
+  background: url(img/logo.png) no-repeat 0 0;
+  background-size: contain;
+}
+.authForm>form>input:nth-of-type(1){
+margin-bottom: 5px;
+padding-bottom: 5px;
+border: none;
+border-bottom: 1px solid #fff;
+background-color: transparent;
+color: #fff;
+}
+.authForm>form>input:nth-of-type(2){
+margin-bottom: 20px;
+padding-bottom: 5px;
+border: none;
+border-bottom: 1px solid #fff;
+background-color: transparent;
+color: #fff;
+}
+.authForm>form>input:nth-of-type(3){
+  border: none;
+  border-radius: 5px;
+  background-color: #361a92;
+  color: #fff;
+  cursor: pointer;
+}
+.toggleAccount{
+  position: absolute; left: 50%; top: 90px;
+  transform: translateX(-50%);
+  display: block;
+  width: 70px;
+  border-radius: 5px;
+  background-color: #361a92;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.social{
+  position: absolute; left: 50%; top: 150px;
+  width: 100px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+.social>button:first-of-type{
+  font-size: 30px;
+  border: none;
+  background-color: transparent;
+  color: #9f38cf;
+  cursor: pointer;
+}
+.social>button:last-of-type{
+  font-size: 30px;
+  border: none;
+  background-color: transparent;
+  color: #9f38cf;
+  cursor: pointer;
+}
+
