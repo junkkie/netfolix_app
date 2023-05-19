@@ -1,2 +1,5 @@
 *{margin: 0;}
 .app{background: linear-gradient(45deg, #130039 10%, #361a92 20%, #19053a 30%, #19053a 70%, #361a92 80%, #130039 100%); height: 100%;}
+.loading{width: 100vw; height: 100vh; background: linear-gradient(45deg, #130039 10%, #361a92 20%, #19053a 30%, #19053a 70%, #361a92 80%, #130039 100%);
+  display: flex; justify-content: center; align-items: center;}
+.loading>span{color: #fff; font-size: 30px; font-family:Arial, Helvetica, sans-serif; font-weight: 600;}
